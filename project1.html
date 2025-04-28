@@ -7,10 +7,11 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-mode">
+<body class="dark-mode project1-page">
 
-    <div class="lamp-toggle" onclick="window.location.href='index.html'">
-        <img src="lamp.svg" alt="Return Home">
+    <!-- Return to Projects Button at Top Right -->
+    <div class="return-to-projects">
+        <button onclick="window.location.href='index.html#projects'">← Back to Projects</button>
     </div>
 
     <section id="project">
@@ -20,9 +21,77 @@
             <p>
                 A fully customized Smart Pot Plant system that monitors soil moisture, temperature, and humidity. 
                 The project uses an ESP32 microcontroller and sensors to track environmental data and sends alerts when the plant needs watering.
-                This project combined hardware engineering, sensor integration, and real-time data analysis.
+                This project combines hardware engineering, sensor integration, and real-time data analysis.
             </p>
-            <button onclick="window.location.href='index.html'">← Back to Home</button>
+
+            <!-- Fake Graphs for Demonstration -->
+            <div class="project-graphs">
+                <div class="graph">
+                    <h3>Temperature Over Time (°C)</h3>
+                    <p>
+                        This graph tracks the temperature of the environment around the plant. The optimal range for the plant is between 18°C and 25°C. 
+                        It helps monitor whether the plant is being exposed to suitable conditions for growth.
+                    </p>
+                    <svg width="400" height="200">
+                        <path d="M10 180 C 40 100, 80 50, 120 100 S 180 180, 220 100 S 280 180, 320 100" stroke="#ff79c6" fill="transparent" stroke-width="2"/>
+                        <text x="10" y="190" fill="white">0</text>
+                        <text x="80" y="190" fill="white">10</text>
+                        <text x="160" y="190" fill="white">20</text>
+                        <text x="240" y="190" fill="white">30</text>
+                        <text x="320" y="190" fill="white">40</text>
+                        <text x="190" y="50" fill="#ff79c6">Temperature (°C)</text>
+                        <!-- Y Axis Values -->
+                        <text x="0" y="170" fill="white">25</text>
+                        <text x="0" y="130" fill="white">20</text>
+                        <text x="0" y="90" fill="white">15</text>
+                        <text x="0" y="50" fill="white">10</text>
+                    </svg>
+                </div>
+
+                <div class="graph">
+                    <h3>Soil Moisture (%)</h3>
+                    <p>
+                        The soil moisture is measured to ensure that the plant is watered correctly. The optimal moisture level for the plant is between 40% and 60%. 
+                        This graph shows how the soil moisture changes over time.
+                    </p>
+                    <svg width="400" height="200">
+                        <path d="M10 180 C 40 160, 80 140, 120 160 S 180 180, 220 160 S 280 140, 320 180" stroke="#ffa500" fill="transparent" stroke-width="2"/>
+                        <text x="10" y="190" fill="white">0</text>
+                        <text x="80" y="190" fill="white">10</text>
+                        <text x="160" y="190" fill="white">20</text>
+                        <text x="240" y="190" fill="white">30</text>
+                        <text x="320" y="190" fill="white">40</text>
+                        <text x="190" y="50" fill="#ffa500">Soil Moisture (%)</text>
+                        <!-- Y Axis Values -->
+                        <text x="0" y="170" fill="white">80</text>
+                        <text x="0" y="130" fill="white">60</text>
+                        <text x="0" y="90" fill="white">40</text>
+                        <text x="0" y="50" fill="white">20</text>
+                    </svg>
+                </div>
+
+                <div class="graph">
+                    <h3>Humidity Levels (%)</h3>
+                    <p>
+                        Humidity plays an important role in the overall health of the plant. The optimal range for humidity is between 50% and 70%. 
+                        This graph tracks changes in the air's humidity around the plant.
+                    </p>
+                    <svg width="400" height="200">
+                        <path d="M10 180 C 40 120, 80 80, 120 120 S 180 180, 220 100 S 280 180, 320 140" stroke="#7fff00" fill="transparent" stroke-width="2"/>
+                        <text x="10" y="190" fill="white">0</text>
+                        <text x="80" y="190" fill="white">10</text>
+                        <text x="160" y="190" fill="white">20</text>
+                        <text x="240" y="190" fill="white">30</text>
+                        <text x="320" y="190" fill="white">40</text>
+                        <text x="190" y="50" fill="#7fff00">Humidity Levels (%)</text>
+                        <!-- Y Axis Values -->
+                        <text x="0" y="170" fill="white">80</text>
+                        <text x="0" y="130" fill="white">60</text>
+                        <text x="0" y="90" fill="white">40</text>
+                        <text x="0" y="50" fill="white">20</text>
+                    </svg>
+                </div>
+            </div>
         </div>
     </section>
 

@@ -6,18 +6,30 @@
 }
 
 /* ========== GENERAL BODY ========== */
+body {
+    font-family: 'Fira Code', monospace;
+    cursor: none; /* Ensures the default cursor is hidden globally */
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body.dark-mode {
     background-color: #1e1e1e;
     color: #ffffff;
-    font-family: 'Fira Code', monospace;
     padding: 40px;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body.light-mode {
     background-color: #f0f0f0;
     color: #111111;
+}
+
+body.dark-mode a {
+    color: #ff79c6;
+}
+
+body.dark-mode a:hover {
+    color: #ff92d0;
 }
 
 canvas#particles {
@@ -30,10 +42,6 @@ canvas#particles {
 }
 
 /* ========== CUSTOM CURSOR ========== */
-body {
-    cursor: none;
-}
-
 .cursor-dot {
     position: fixed;
     top: 0;
@@ -60,7 +68,6 @@ body {
     cursor: pointer;
     z-index: 1000;
     transition: all 0.3s ease;
-    font-family: 'Fira Code', monospace;
     animation: pulseLamp 2s infinite;
 }
 
@@ -94,9 +101,18 @@ section {
     margin-top: 20px;
 }
 
+.hero-subtitle.secondary {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-top: 10px;
+}
+
 .scroll-indicator {
     margin-top: 50px;
     animation: float 2s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .arrow {
@@ -210,7 +226,7 @@ section {
 }
 
 #wave {
-    animation: waveMotion 4s infinite ease-in-out alternate;
+    animation: waveMotion 4s infinite ease-in-out alternate, glowPulse 3s infinite alternate;
 }
 
 @keyframes waveMotion {
@@ -219,6 +235,11 @@ section {
     100% { d: path("M0 50 Q50 45 100 50 T200 50 T300 50 T400 50 T500 50"); }
 }
 
+@keyframes glowPulse {
+    0% { stroke: #00ff00; }
+    50% { stroke: #7fff7f; }
+    100% { stroke: #00ff00; }
+}
 
 /* ========== PROJECTS ========== */
 .projects-content {
@@ -260,12 +281,86 @@ footer {
     color: #888;
 }
 
-#wave {
-    animation: waveMotion 4s infinite ease-in-out alternate, glowPulse 3s infinite alternate;
+/* ========== CURSOR FOR SMART POT ========== */
+.smart-pot:hover {
+    cursor: url('pot-cursor.svg') 16 16, auto;
 }
 
-@keyframes glowPulse {
-    0% { stroke: #00ff00; }
-    50% { stroke: #7fff7f; }
-    100% { stroke: #00ff00; }
+/* ========== CURSOR FOR PROJECT 1 PAGE ========== */
+body.project1-page {
+    cursor: url('pot-cursor.svg') 16 16, auto;
+}
+
+/* TESTING ADDITIONAL CURSOR SPECIFICITY */
+.project-card.smart-pot:hover {
+    cursor: url('pot-cursor.svg') 16 16, auto;
+}
+
+/* ========== RETURN TO PROJECTS BUTTON ========== */
+.return-to-projects {
+    background-color: #7dd3fc;  /* Blue background */
+    border: none;  /* Removes the border */
+    color: #111;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: default;  /* Ensures the cursor does not change */
+}
+
+/* Hover effect */
+.return-to-projects:hover {
+    background-color: #ff79c6;  /* Pink background on hover */
+    color: #fff;  /* White text on hover */
+    cursor: default;  /* Keeps the cursor as default (no change) */
+}
+
+
+/* ========== GRAPHS AND SPACING IMPROVEMENTS ========== */
+.graph-container {
+    margin-top: 40px;
+    width: 80%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.graph-container svg {
+    width: 100%;
+    height: 300px;
+}
+
+.graph-container p {
+    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.graph-container .graph-description {
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.graph-container .graph-legend {
+    color: #ff79c6;
+}
+
+/* SPACING IMPROVEMENTS */
+.project-detail {
+    margin: 30px 0;
+}
+
+.project-detail h1 {
+    margin-bottom: 20px;
+}
+
+.project-detail p {
+    margin-bottom: 20px;
+    line-height: 1.8;
 }
