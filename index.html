@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dylan Walt | Engineering Portfolio</title>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+
+    <!-- Floating Particles -->
+    <canvas id="particles"></canvas>
+
+    <!-- Lamp Toggle Button -->
+    <div class="lamp-toggle" onclick="toggleDarkMode()">
+        <span id="lamp-text">Toggle Light Mode</span>
+    </div>
+
+    <!-- Landing Section -->
+    <section id="landing">
+        <div class="landing-content">
+            <h1 class="hero-title">Dylan Walt</h1>
+            <p class="hero-subtitle">Engineering the Future | Electrical Engineer | Innovator</p>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="arrow"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container about-content">
+            <div class="photo-wrapper">
+                <img src="your-photo.jpg" alt="Dylan Walt" class="about-photo">
+                <img src="brushstroke.png" alt="" class="brushstroke">
+            </div>
+            <h2>About Me</h2>
+            <p>
+                I'm a passionate Electrical Engineering student at Wits University, focusing on embedded systems, signal processing, and building innovations that blend precision and creativity.
+            </p>
+        </div>
+    </section>
+    
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container skills-content">
+            <h2>Skills</h2>
+            <div class="skills-visual">
+                <div class="gear-left">
+                    <img src="gear.svg" class="gear rotate">
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">Arduino</div>
+                    <div class="skill-item">C++</div>
+                    <div class="skill-item">MATLAB</div>
+                    <div class="skill-item">Signal Processing</div>
+                </div>
+                <div class="gear-right">
+                    <img src="gear.svg" class="gear rotate-reverse">
+                </div>
+            </div>
+            <div class="waveform">
+                <svg viewBox="0 0 500 100">
+                    <defs>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <path id="wave" d="M0 50 Q50 45 100 50 T200 50 T300 50 T400 50 T500 50" stroke="lime" stroke-width="2" fill="none" filter="url(#glow)" />
+                </svg>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container projects-content">
+            <h2>Projects</h2>
+            <div class="project-card" onclick="location.href='project1.html'">
+                <h3>Smart Pot Plant</h3>
+                <p>Click to view project</p>
+            </div>
+            <div class="project-card" onclick="location.href='project2.html'">
+                <h3>Signal Analysis on ESP32</h3>
+                <p>Click to view project</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container contact-content">
+            <h2>Let's Connect</h2>
+            <p>Email: <a href="mailto:dylanwalt10@gmail.com">dylanwalt10@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/dylanwalt" target="_blank">linkedin.com/in/dylanwalt</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Engineering the future, one signal at a time. 🚀</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
