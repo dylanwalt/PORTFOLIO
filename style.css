@@ -308,14 +308,26 @@ body.project1-page {
     text-decoration: none;
     margin-top: 20px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    cursor: default;  /* Ensures the cursor does not change */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.return-to-projects button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: inherit;
+    padding: 0;
 }
 
 /* Hover effect */
 .return-to-projects:hover {
     background-color: #ff79c6;  /* Pink background on hover */
     color: #fff;  /* White text on hover */
-    cursor: default;  /* Keeps the cursor as default (no change) */
+    cursor: pointer;
 }
 
 
