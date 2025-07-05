@@ -1,4 +1,5 @@
 // ========== Section Animations ==========
+gsap.registerPlugin(ScrollTrigger);
 gsap.from(".hero-title", { duration: 1, y: -50, opacity: 0 });
 gsap.from(".hero-subtitle", { duration: 1, y: 50, opacity: 0, delay: 0.5 });
 gsap.from(".scroll-indicator", { duration: 1, opacity: 0, delay: 1 });
